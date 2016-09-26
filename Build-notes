@@ -1,0 +1,7 @@
+Magento 2
+
+// Check Yes/ No value and display block if so.
+
+<?php if ($_product->getAttributeText('free_shipping_identifer_itc')):?>
+<?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('category-page-pricing-promo')->toHtml();?>
+<?php endif?>
