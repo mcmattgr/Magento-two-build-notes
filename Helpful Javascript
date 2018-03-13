@@ -1,0 +1,32 @@
+Helpful Magento Code
+////Javascript
+
+***This JS makes product attributes clickable on product page***
+<script type="text/javascript">
+require(['jquery'], function($) {
+   $(document).ready(function() {
+       var attrVal = $('.additional-attributes-wrapper').find("td[data-th='Product Condition']").text();
+       if (attrVal === 'Cisco Excess') {
+           $('.additional-attributes-wrapper').find("td[data-th='Product Condition']").html('<a href="https://vistaitgroup.com/core-competencies/data-center/strategic-relationships/cisco-excess.html">Cisco Excess</a>'):
+       }
+   });
+});
+</script>
+
+***This JS adds a class where text is recognized and moves the item outside of the viewable area.***
+<style type="text/css">
+.special-content{
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+</style>
+
+<script type="text/javascript">
+require(['jquery'], function($) {
+
+jQuery( document ).ready(function() {
+    jQuery("th.col.label:contains('HDN ID')").parent().addClass('special-content'); 
+});
+});
+</script>
